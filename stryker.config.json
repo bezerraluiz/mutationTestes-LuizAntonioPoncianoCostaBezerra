@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "packageManager": "npm",
+  "reporters": ["html", "clear-text", "progress", "dashboard"],
+  "testRunner": "jest",
+  "coverageAnalysis": "off",
+  "mutate": [
+    "src/utilitarios.js"
+  ],
+  "ignorePatterns": [
+    "node_modules",
+    "coverage",
+    "reports"
+  ],
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": 50
+  },
+  "timeoutMS": 60000,
+  "concurrency": 4,
+  "htmlReporter": {
+    "baseDir": "reports/mutation"
+  }
+}
